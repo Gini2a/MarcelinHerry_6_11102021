@@ -1,7 +1,7 @@
 //importer mongoose
 const mongoose = require('mongoose');
 
-
+//Creation schema de données. Un modèle de donnée qui permet d'enregistrer, lire et modifier les objets qui sont en vente dans la base de données
 const sauceSchema = mongoose.Schema({
     userId : {type: String, require: true},
     name : {type: String, require: true},
@@ -16,4 +16,5 @@ const sauceSchema = mongoose.Schema({
     usersDisliked :{type: [String]}
 })
 
+//Exportation du schema en tant que modèle Mongoose apppelée Sauce, et rendu disponible pour express
 module.exports = mongoose.model('Sauce', sauceSchema);
